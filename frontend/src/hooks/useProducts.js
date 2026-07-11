@@ -1,7 +1,8 @@
 // Custom hook — fetches products with filters & pagination
 import { useState, useEffect, useCallback } from "react";
 
-const BASE_URL = "/api/products";
+const API_BASE_URL = (import.meta.env.VITE_API_URL || "").replace(/\/$/, "");
+const BASE_URL = `${API_BASE_URL}/api/products`;
 
 export const useProducts = () => {
   const [products, setProducts]   = useState([]);

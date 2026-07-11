@@ -14,7 +14,7 @@ const categories = [
   "Automotive",
 ];
 
-const generateProducts = (count = 200000) => {
+const generateProducts = (count = 50) => {
   return Array.from({ length: count }, () => ({
     name: faker.commerce.productName(),
     description: faker.commerce.productDescription(),
@@ -32,7 +32,7 @@ const seedDB = async () => {
     console.log("🗑️  Clearing existing products...");
     await Product.deleteMany({});
 
-    const products = generateProducts(200000);
+    const products = generateProducts(50);
     console.log(`🌱 Seeding ${products.length} products...`);
     await Product.insertMany(products);
 
