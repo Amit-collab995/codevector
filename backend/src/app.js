@@ -4,7 +4,7 @@ import productRoutes from "./routes/productRoutes.js";
 
 const app = express();
 
-const allowedOrigins = ["http://localhost:3000"];
+const allowedOrigins = ["https://codevector-1-377u.onrender.com"];
 
 // ---------- Middleware ----------
 app.use(
